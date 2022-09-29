@@ -11,8 +11,12 @@
         </div>
     </div>
 
-    <div class="line-color"></div>
+    <hr>
+    <hr>
+    <hr>
     
+    <h1 class="titleshop">Door Selection</h1>
+
     <div class="item-container">
         <div class="wow flash">
             <img src="assets/images/door1.png" alt="" class="door">
