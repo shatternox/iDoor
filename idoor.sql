@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 30, 2022 at 06:16 PM
+-- Generation Time: Oct 03, 2022 at 07:12 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -49,6 +49,37 @@ INSERT INTO `doors` (`door_id`, `door_name`, `door_desc`, `door_price`) VALUES
 (8, 'iDoor 12 Blue', 'Get your iDoor 12 now! Replace your ugly doors with our expensive products! The difference?', 5000),
 (9, 'iDoor 11', 'One of the older versions, but it still functions well!', 2500);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_history`
+--
+
+CREATE TABLE `order_history` (
+  `order_id` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `item_purchased` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `username`, `password`) VALUES
+(1, 'admin', '$2y$10$KpaXSxR0nX.yiswsRsghYuKjLanohPAjDr5YGzL1D6piyux4haIVO');
+
 --
 -- Indexes for dumped tables
 --
@@ -60,6 +91,18 @@ ALTER TABLE `doors`
   ADD PRIMARY KEY (`door_id`);
 
 --
+-- Indexes for table `order_history`
+--
+ALTER TABLE `order_history`
+  ADD PRIMARY KEY (`order_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -68,6 +111,12 @@ ALTER TABLE `doors`
 --
 ALTER TABLE `doors`
   MODIFY `door_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
