@@ -21,8 +21,23 @@ body {
 
 .door {
   width: 400px;
+  display: block;
+  margin: auto;
 }
-
+.swiper{
+  width:60%;
+  /* height: 510px; */
+  margin-bottom: 50px;
+}
+.door-desc-text{
+  text-align:"center";
+  margin: auto;
+  width: 50%;
+}
+.door-desc-text p,.door-desc-text h2{
+  text-align: center;
+  margin:0;
+}
 .item-container {
   display: flex;
   justify-content: center;
