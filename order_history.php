@@ -55,6 +55,7 @@ while ($row = $result->fetch_assoc()) {
             <li class="list-group-item disabled">Username: <?= $row['username'] ?></li>
             <li class="list-group-item">Order ID: <?= $row['order_id'] ?></li>
             <li class="list-group-item">Item Id: <?= $row['item_purchased'] ?></li>
+            <li class="list-group-item">Item Name: <?= $row['item_name'] ?></li>
         </ul>
  
     </div>

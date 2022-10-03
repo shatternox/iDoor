@@ -42,6 +42,7 @@ if ($result->num_rows < 1) {
             </p>
             <form action="./controller/buyController.php" method="POST">
                 <input type="hidden" value="<?= $row["door_id"] ?>" name="door_id">
+                <input type="hidden" value="<?= $row["door_name"] ?>" name="door_name">
                 <button type="submit" class="btn btn-success">Buy</button>
             </form>
         </div>
