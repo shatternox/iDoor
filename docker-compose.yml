@@ -5,7 +5,7 @@ services:
         ports: 
             - "55124:80"
         volumes:
-            - ./web:/var/www/html/
+            - ./web:/var/www/html/:ro
         links:
             - db
         networks:
